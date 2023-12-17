@@ -34,3 +34,21 @@ jobs:
         with:
           name: PDF
           path: main.pdf
+      - name: Prepare for deployment
+        run: mv main.pdf deploy/cv.pdf
+      - name: Upload artifact for Github Pages
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./deploy
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
