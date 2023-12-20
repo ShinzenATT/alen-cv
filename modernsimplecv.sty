@@ -27,18 +27,18 @@
 \usetikzlibrary{shapes.misc,positioning}
 \usetikzlibrary{arrows}
 \usetikzlibrary{arrows.meta}
-\usetikzlibrary{backgrounds} 
+\usetikzlibrary{backgrounds}
 \usetikzlibrary{shadings}
-\usetikzlibrary{calendar} 
+\usetikzlibrary{calendar}
 \usetikzlibrary{er}
 \usetikzlibrary{patterns} % horizontal lines, vertical lines, north east lines, north west lines, grid, crosshatch, dots, crosshatch dots, fivepointed stars, sixpointed stars, bricks
-\usetikzlibrary{shapes} 
+\usetikzlibrary{shapes}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{decorations}
 \usetikzlibrary{topaths}
 
 \usepackage{graphicx}
-%\usepackage[usenames, dvipsnames]{color} 
+%\usepackage[usenames, dvipsnames]{color}
 % https://de.sharelatex.com/learn/Using_colours_in_LaTeX#!#Reference_guide z.B. \color{RubineRed}
 %\usepackage{xcolor}
 
@@ -51,14 +51,14 @@
 
 % Format of the section titles
 \titleformat{\section}{
-\scshape\Large\raggedright}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
+\scshape\Large\raggedright}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;)
 \titlespacing{\section}{0pt}{12pt}{5pt} % Spacing around titles {<left spacing>}{<before spacing>}{<after spacing>}
 %----------------------------------------------------
 
  \newcommand{\cvkeyword}[3]{
  \colorbox{#2}{\textcolor{#3}{#1}} \phantom{}%
  }
- 
+
 %------------------------
 \newcommand{\cvtag}[1]{% from alta-cv: https://www.overleaf.com/latex/templates/altacv-template/trgqjpwnmtgv
   \tikz[baseline]\node[draw=black!40,rounded corners,inner sep=0.4em]{\color{black!50}#1};
@@ -77,7 +77,7 @@
 \node[left=0.5em,text=#3] at (-1,0) {#1 #7};%
 \end{tikzpicture}%
 }
- 
+
 
 \usepackage{smartdiagram}
 %-----------------------------------------------------
@@ -132,7 +132,7 @@
 
 
 
-%----------------------------------------------------- font highlighting / boxes with background color 
+%----------------------------------------------------- font highlighting / boxes with background color
 \newcommand{\bg}[3]{\colorbox{#1}{\bfseries\color{#2}#3}}
 \newcommand{\bgupper}[3]{\colorbox{#1}{\color{#2}\huge\bfseries\MakeUppercase{#3}}}
 
@@ -210,22 +210,22 @@
 % -------------------------------------------------------------------------
 
 
- 
+
  % skillsection environment
 \newenvironment{skillsection}[1]{%
 \begin{minipage}[t]{#1}%
 \begin{tabular}{c p{0.7\textwidth}} %linksbuendig
 }{%
-\end{tabular}\end{minipage}\vspace{1em}%
+\end{tabular}\end{minipage}%
 }
 
-% \cvitem{<Item/Skill:SMALLCAPS>}{<Beschreibung>} 
+% \cvitem{<Item/Skill:SMALLCAPS>}{<Beschreibung>}
 \newcommand{\cvitem}[2]{%
   \textsc{#1} & {\footnotesize #2}\\}
 
-  %------------------------------ 
- 
- \newcommand{\lineheading}[4]{\vspace{1em}\begin{minipage}[t]{#1}\color{#4}\centering\bfseries\icon{#3}{#4}{}\MakeUppercase{#2}\\\rule{0.7\textwidth}{1.5pt}\end{minipage}\vspace{1em}}
+  %------------------------------
+
+ \newcommand{\lineheading}[4]{\vspace{10pt}\begin{minipage}[t]{#1}\color{#4}\centering\bfseries\icon{#3}{#4}{}\MakeUppercase{#2}\\\rule{0.7\textwidth}{1.5pt}\end{minipage}}
 
 %-------------------------------------------- bubbles
 
@@ -234,7 +234,7 @@
 \newcommand{\skillbubbletable}[6]{%
 \begin{minipage}[t]{#1\textwidth}
 \begin{tabular}{ m{#2\textwidth} m{#2\textwidth} m{#2\textwidth} m{#2\textwidth} m{#2\textwidth} m{#3\textwidth} l}
-#4 \\[#6] #5 
+#4 \\[#6] #5
 \end{tabular}\end{minipage}}
 
 \newcommand{\skillbubbles}[7]{\skillbubble{#2}{#1} & \skillbubble{#3}{#1} & \skillbubble{#4}{#1} & \skillbubble{#5}{#1} & \skillbubble{#6}{#1} & \skillbubble{#7}{#1} & }

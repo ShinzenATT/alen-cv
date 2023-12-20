@@ -8,14 +8,14 @@
 % -----------------------------------------------------------------------------------
 \usepackage[default]{raleway}
 %\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}\normalfont
-%\usepackage[familydefault,light]{Chivo} 
+%\usepackage[familydefault,light]{Chivo}
 %\usepackage[sfdefault,light,condensed]{roboto}
 %\usepackage[default]{cantarell}
 %\usepackage[sfdefault]{AlegreyaSans}
 
 
 \usepackage{beuron}
-\usepackage{LobsterTwo}%if not suposed to be main font, load other main font after this
+\usepackage{LobsterTwo}
 
 
 
@@ -27,7 +27,7 @@
 \setlength{\rightcolwidth}{0.47\textwidth}
 
 %------------------------------------------------------------------
-\title{modern-simple-CV}
+\title{Alen-resume}
 \author{\LaTeX{} Ninja}
 \date{August 2019}
 
@@ -70,7 +70,7 @@
 \href{mailto:alen.mukaca@gmail.com}{\faEnvelopeO~ \protect alen.mukaca@gmail.com} \\[0.1cm]
 
 %\faMapMarker~ Gibraltargatan 80, 412 79 Gotheburg \\
-%\aiAcademiaSquare 
+%\aiAcademiaSquare
 \href{https://linkedin.com/in/alen-mukaca/}{\faLinkedin~ \protect linkedin.com/in/alen-mukaca} \\
 \href{https://github.com/ShinzenATT}{\faGithub~ \protect github.com/ShinzenATT} \\
 \href{https://shinzle.net}{\faGlobe~ \protect www.shinzle.net}
@@ -106,21 +106,35 @@
 
 \section*{Work Experience}
 
-\begin{tabular}{p{0.25\textwidth} | p{0.6\textwidth}}
-    \cvevent{Jan - Aug 2023}{Bachelors Thesis}{
+\begin{tabular}{p{0.2\textwidth} | p{0.6\textwidth}}
+    \cvevent{Aug 2023 - Jan 2024}{Cloud/Back-end Consultant}
+    {Volvo Group Connected Solutions through New Minds}{Gotheburg}{
+        ...
+    }{imgs/vgcs_new_minds.jpg} \\
+
+    \cvevent{Jun - Aug 2023}{Part-time IOT Developer}{
+        Combitech}{Gotheburg}{
+        Interfaced a ROS based robot with an exisitng IOT platform by creating a Kotlin based middleware.
+        The middleware exposes a REST api for actions and sends MQTT msgs for tracked data.
+        The robot's python code hade be configured use websocket with the middleware and the middleware handled the events with coroutines.
+    }{imgs/combitech.jpg} \\
+
+    \cvevent{Jan - Jun 2023}{Bachelors Thesis - VR \& Robot}{
     Combitech}{Gotheburg}{
-    Currently working on a VR application using Godot with C\# and ROS with Python for robot firmware.
+    Created a VR application that controls to a real-life robot wirelessly.
+    The application is made in Godot and C\# that interfaces with OpenXR.
+    The robot is a car with a arm that runs ROS with Python in Ubuntu.
     }{imgs/combitech.jpg}
 \end{tabular}
 
 \lineheading{125px}{Code Skills}{\faCode}{black}
-\lineheading{125px}{Other Skills}{\faUser}{black}\\
+\lineheading{125px}{Misc. Skills}{\faUser}{black}\\
 \hspace*{10px}
 \begin{skillsection}{115px}
-    \cvitem{\faStar\faStar\faStar\faStar\faStar}{Java}
-    \cvitem{\faStar\faStar\faStar\faStarO\faStarO}{Vue.js, TypeScript}
-            \cvitem{\faStar\faStar\faStar\faStarO\faStarO}{PostgreSQL}
-        \cvitem{\faStar\faStar\faStar\faStarO\faStarO}{Docker \& Linux}
+    \cvitem{\faStar\faStar\faStar\faStar\faStar}{Java \& Kotlin}
+    \cvitem{\faStar\faStar\faStar\faStar\faStarO}{Vue.js \& TypeScript}
+    \cvitem{\faStar\faStar\faStar\faStar\faStarO}{Docker \& Linux}
+    \cvitem{\faStar\faStar\faStar\faStarO\faStarO}{PostgreSQL}
     \cvitem{\faStar\faStar\faStarO\faStarO\faStarO}{C}
 \end{skillsection}
 \hspace{10px}
@@ -137,10 +151,14 @@
 \small
 \section*{Volunteering Experience}
 
-\begin{tabular}{p{0.25\textwidth}| p{0.6\textwidth}}
-    \cvevent{2022--2023}{IT-Responsible and Representative}{Lindholmens Pubförening (PubF)}{Lindholmen, Gothenburg}{PubF is a student association that manages a Pub known as 11:an and handles bookinng for it. My role is similar to a System Administrator that maintains IT-infrastructure.}{imgs/pubf.png} \\
-    \cvevent{2021--2022}{Code Chief}{H-Sektionens Datorförening (HD)}{Chalmers}{HD is a student committee with focus on hosting boardgame related events, developing software such as websites and assisting other students with code problems.}{imgs/hd.png} \\
-    \cvevent{2018--2019}{Student Ambassador}{NTI Gymnasiet}{Kronhusgatan, Gothenburg}{Advertises the school by representing the school at events and fairs.}{imgs/nti.png}
+\begin{tabular}{p{0.2\textwidth}| p{0.6\textwidth}}
+    \cvevent{May 2022 - Apr 2023}{IT-Responsible and Comissioner}{Lindholmens Pubförening (PubF)}{Lindholmen, Gothenburg}{
+        Managed a pub and various IT systems such as Google Workspace, DNS for email, booking system in PHP and Wordpress.
+    }{imgs/pubf.png} \\
+    \cvevent{Apr 2021 - Apr 2022}{Comissioner and Code Responsible}{H-Sektionens Datorförening (HD)}{Chalmers}{
+        Created Vue.js websites, REST APIs in Kotlin and deployed them with Docker. Planned and hosted events. Helped students with coding.
+    }{imgs/hd.png} \\
+    %\cvevent{2018--2019}{Student Ambassador}{NTI Gymnasiet}{Kronhusgatan, Gothenburg}{Advertises the school by representing the school at events and fairs.}{imgs/nti.png}
 \end{tabular}
 
 %\vspace{4em}
@@ -180,7 +198,7 @@
 
 \begin{tabular}{p{0.2\textwidth}| p{0.6\textwidth} c}
     \cvevent{2020--2023}{Computer Engineering, Bachelors)}{Chalmers University of Technology}{Gothenburg}{Developed with C and applied it in several ways such as embedded and concurrent programming. Also coded in Java while applying design patterns, using TCP communication, created swing UIs, and programmed concurrently. Courses also included agile SCRUM, Erlang, UX design, Requirements Engineering.}{imgs/chalmers.jpg} \\
-    
+
     \cvevent{2017--2020}{High School Technology Student}{NTI Gymnasiet Kronhus}{Gothenburg}{Developed with Java and C\# whilst working with UI and SOLID. Also developed HTML, CSS \& JavaScript as well as PHP with a MySQL database. Additionally worked with Interface design and how to mock--up User Interfaces.}{imgs/nti.png} \\
 \end{tabular}
 
@@ -188,7 +206,7 @@
 
 \vspace{1em}
 
-\section{Projects \& Course Projects} 
+\section{Projects \& Course Projects}\label{sec:projects-&-course-projects}
 \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.35\textwidth}}
     PubF & System Adminstration such as migrating services to Google Workspace, configuring DNS and improving booking system made in Laravel PHP and Vue.js. \vspace{3px} \\
     \href{https://www.student.chalmers.se/sp/course?course_id=34088}{DAT067} & A Radio streaming app that is made with Flutter and a Dart HTTP \& websocket server for streaming of audio. Is commissioned by LNDN AB for the course.  \vspace{3px} \\
@@ -196,10 +214,10 @@
     \href{https://www.student.chalmers.se/sp/course?course_id=34092}{DAT257} & While learning the agile method SCRUM we made a React TypeScript web app and a simple Java Spring Boot HTTP server for calculating emissions for a trip.\vspace{3px} \\
     \href{https://www.student.chalmers.se/sp/course?course_id=34004}{TDA384} & Covered both threaded concurrency and message passing between processes where Java and Erlang was used respectively. \vspace{3px} \\
     HD & Full-stack website with TypeScript Vue.js web app and Kotlin with Ktor HTTP API that are containerised with Docker. \vspace{3px} \\
-    
+
 \end{tabular}
 
-\section{Refrences}
+\section{Refrences}\label{sec:refrences}
 Refrences are available on request.
 
 %\bigskip
@@ -243,7 +261,7 @@ Refrences are available on request.
 %\setlength{\parindent}{0pt}
 %\begin{minipage}[t]{\textwidth}
 %\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-%{\small Alen Mukaca \icon{\faMapMarker}{black}{} Gibraltargatan 80, Gothenburg 
+%{\small Alen Mukaca \icon{\faMapMarker}{black}{} Gibraltargatan 80, Gothenburg
 %\href{tel:+46762160103}{\icon{\faPhone}{black}{} (+46) 762 160103}
 %\href{mailto:alen.mukaca@gmail.com}{\icon{\faEnvelopeO}{black}{} \protect alen.mukaca@gmail.com}
 %}
