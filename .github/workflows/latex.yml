@@ -48,7 +48,7 @@ jobs:
           name: alen-cv_sv.pdf
           path: main_se.pdf
       - name: Prepare for deployment
-        run: mv main.pdf deploy/cv.pdf
+        run: mv main.pdf deploy/cv.pdf && mv main_se.pdf deploy/cv_se.pdf
       - name: Upload artifact for Github Pages
         id: deployment
         uses: actions/upload-pages-artifact@v5
