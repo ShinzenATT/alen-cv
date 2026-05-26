@@ -34,12 +34,19 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: main.tex
-      - name: Upload PDF file
+          root_file: |
+            main.tex
+            main_se.tex
+      - name: Upload eng PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
+          name: alen-cv_eng.pdf
           path: main.pdf
+      - name: Upload sv PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: alen-cv_sv.pdf
+          path: main_se.pdf
       - name: Prepare for deployment
         run: mv main.pdf deploy/cv.pdf
       - name: Upload artifact for Github Pages
